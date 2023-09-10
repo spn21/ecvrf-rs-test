@@ -1,0 +1,20 @@
+[package]
+name = "ecvrf-rs"
+version = "1.0.0"
+license = "Apache-2.0"
+categories = ["cryptography"]
+exclude = [
+    "**/.gitignore",
+    ".gitignore",
+    ".travis.yml",
+]
+
+[dependencies]
+sha2 = { version = "0.10.2", default-features = false }
+curve25519-entropic = { version= "3.2.1", default-features = false, features = ["alloc", "u64_backend"] }
+thiserror = "1.0.31"
+schemars = "0.8.8"
+serde = { version = "1.0.137", default-features = false, features = ["derive"] }
+
+[dev-dependencies]
+hex = "0.4.3"
